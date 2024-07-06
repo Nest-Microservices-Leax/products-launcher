@@ -53,3 +53,14 @@ Si se hace al revés, se perderán las referencias de los sub-módulos en el rep
 ```
 docker compose -f docker-compose.prod.yml build
 ```
+
+
+## Google Cloud
+1. Primero hay que crear la imagen con la ruta de google
+```
+docker build -f dockerfile.prod -t europe-southwest1-docker.pkg.dev/store-microservices-428520/image-registry/client-gateway .
+```
+2. luego se hace el push 
+```
+docker image push europe-southwest1-docker.pkg.dev/store-microservices-428520/image-registry/client-gateway
+```
